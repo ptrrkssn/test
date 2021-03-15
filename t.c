@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define uid_t int32_t
-#define gid_t int32_t
-
 enum wbcIdType {
        WBC_ID_TYPE_NOT_SPECIFIED,
        WBC_ID_TYPE_UID,
