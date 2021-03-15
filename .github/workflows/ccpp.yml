@@ -1,0 +1,14 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-16.04]
+    steps:
+    - uses: actions/checkout@v2
+    - name: compile
+      run: gcc -DTRIGGER -Wstrict-overflow=2 -O3 -o t t.c
