@@ -1,6 +1,5 @@
-#include <stdio.h>
-
 #if 0
+#include <stdio.h>
 #include <unistd.h>
 #else
 typedef unsigned int uid_t;
@@ -43,7 +42,7 @@ static void make_error(void)
        }
 #endif
        if (wbc_ids[0].type == WBC_ID_TYPE_NOT_SPECIFIED) {
-               printf("test to satisfy compiler\n");
+	 write(1, "Foo\n", 4);
        }
 }
 
