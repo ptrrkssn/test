@@ -1,5 +1,11 @@
 #include <stdio.h>
+
+#if 0
 #include <unistd.h>
+#else
+typedef unsigned int uid_t;
+typedef unsigned int gid_t;
+#endif
 
 enum wbcIdType {
        WBC_ID_TYPE_NOT_SPECIFIED,
