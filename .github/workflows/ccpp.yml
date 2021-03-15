@@ -10,5 +10,9 @@ jobs:
         os: [ubuntu-latest, ubuntu-16.04]
     steps:
     - uses: actions/checkout@v2
-    - name: compile
+    - name: version
+      run: gcc --version
+    - name: no-trigger
+      run: gcc -Wstrict-overflow=2 -O3 -o t t.c
+    - name: trigger
       run: gcc -DTRIGGER -Wstrict-overflow=2 -O3 -o t t.c
